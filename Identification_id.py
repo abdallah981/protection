@@ -260,10 +260,9 @@ def Identification_(message: Message):
             return mrk
 
         Photo_user = f"https://t.me/{chan_inf.username}"
-        ttttxt = f"""𝐒𝐎𝐔𝐑𝐂𝐄 {chan_inf.title if chan_inf.title else chan_inf.first_name} ❍ 
+        ttttxt = f""" ✯ 𝐃𝐄𝐕 : {chan_inf.title if chan_inf.title else chan_inf.first_name}
 
-˹ 𐇮 𝑴𝑶𝑫𝒀 𖠮🚸𖠮 آلـۘهہؚيـٰـ‌ُـُ໋۠بـ໋ۘ۠ه 𐇮
-~"""
+ ✯ 𝐒𝐎𝐔𝐑𝐂𝐄 : @EF_19"""
         try:
             bot.send_photo(
                 chat_id,
