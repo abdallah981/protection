@@ -88,7 +88,7 @@ def Disable_and_activate(message: Message):
                     usnm = f'<a href="tg://user?id={ADMIN.id}">{ADMIN.first_name}</a>'
                     bot.send_message(
                         chat_id=chID,
-                        text=f"تم تفعيل البوت في المجموعه \n تم التفعيل بواسطه: {usnm}",
+                        text=f"• المجموعه تم تفعيلها تلقائي\n• بواسطة ↤︎ {usnm}",
                         parse_mode="HTML",
                         reply_to_message_id=message.id,
                     )
@@ -100,7 +100,7 @@ def Disable_and_activate(message: Message):
                     usnm = f'<a href="tg://user?id={ADMIN.id}">{ADMIN.first_name}</a>'
                     bot.send_message(
                         chat_id=IsDevloper(),
-                        text=f" تم تفعيل البوت في {grnm} \n  تم تفعيل بواسطه: {usnm}",
+                        text=f"• تم تفعيل البوت في : {grnm} \n• بواسطة ↤︎ {usnm}",
                         parse_mode="HTML",
                         disable_web_page_preview=True,
                     )
@@ -122,7 +122,7 @@ def Disable_and_activate(message: Message):
         else:
             bot.send_message(
                 chat_id=message.chat.id,
-                text="هذا الامر مخصص للمالك و المطور  فقط",
+                text="• هذا الامر مخصص للمالك و المطور فقط",
                 parse_mode="HTML",
             )
 
@@ -140,13 +140,13 @@ def Disable_and_activate(message: Message):
                 if all_pre(bot, message.chat.id):
                     bot.send_message(
                         chat_id=chID,
-                        text=f"-- تم تعطيل البوت في المجموعه \n -- تم التعطيل بواسطه: {ADMIN.first_name}",
+                        text=f"• تم تعطيل البوت في المجموعه \n• تم التعطيل بواسطه: {ADMIN.first_name}",
                         parse_mode="HTML",
                     )
                     delete_group(message.chat.id)
                     bot.send_message(
                         chat_id=IsDevloper(),
-                        text=f"تم تعطيل بوتك في مجموعه: {message.chat.title}",
+                        text=f"• تم تعطيل بوتك في مجموعه: {message.chat.title}",
                         parse_mode="HTML",
                     )
 
@@ -165,7 +165,7 @@ def Disable_and_activate(message: Message):
         else:
             bot.send_message(
                 chat_id=message.chat.id,
-                text="هذا الامر مخصص للمالك و المطور  فقط",
+                text="• هذا الامر مخصص للمالك و المطور فقط",
                 parse_mode="HTML",
             )
 
