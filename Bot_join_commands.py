@@ -22,12 +22,12 @@ def Bot_join(message: ChatMemberUpdated):
         # is bot has all premations or not
         if all_pre(bot, message.chat.id):
           insert_group(message.chat.id)
-          bot.send_message(chat_id=chID,text=f"-- تم تفعيل البوت في المجموعه \n -- تم التفعيل بواسطه: {ADMIN.first_name}",parse_mode="HTML")
+          bot.send_message(chat_id=chID,text=f"• تم تفعيل البوت في المجموعه \n• تم التفعيل بواسطه: {ADMIN.first_name}",parse_mode="HTML")
           Automatic_lift(message.chat.id)
         else:
           bot.send_message(chat_id=message.chat.id, text="عذرا, يجب اعطائي كافه الصلاحيات !",parse_mode="HTML")
       else:
-        bot.send_message(chat_id=message.chat.id, text=f"⌔︙ تم تفعيلها مسبقا",parse_mode="HTML")
+        bot.send_message(chat_id=message.chat.id, text=f"•︙ تم تفعيلها مسبقا",parse_mode="HTML")
     else:
       bot.send_message(chat_id=message.chat.id, text="هذا الامر مخصص للمشرفين فقط" ,parse_mode="HTML")
   if 'admin' in old.status and new.status in ['member', 'left', 'kicked']:
